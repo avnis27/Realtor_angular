@@ -1,0 +1,4 @@
+C:\Data\Projects\Realtors\RealtorAPI\obj\Debug\netcoreapp2.2\RealtorAPI.AssemblyInfoInputs.cache
+C:\Data\Projects\Realtors\RealtorAPI\obj\Debug\netcoreapp2.2\RealtorAPI.AssemblyInfo.cs
+C:\Data\Projects\Realtors\RealtorAPI\obj\Debug\netcoreapp2.2\RealtorAPI.csproj.CoreCompileInputs.cache
+C:\Data\Projects\Realtors\RealtorAPI\bin\Debug\netcoreapp2.2\DAL.dll

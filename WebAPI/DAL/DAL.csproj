@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{69EEF30E-BE26-47CC-939D-4F3E769D62A9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DAL</RootNamespace>
+    <AssemblyName>DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\RealtorAPI\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SqlClient, Version=4.6.1.2, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\RealtorAPI\packages\System.Data.SqlClient.4.8.2\lib\net461\System.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DBHelper\ISqlHelper.cs" />
+    <Compile Include="DBHelper\SqlHelper.cs" />
+    <Compile Include="IRepository\IAgentRepository.cs" />
+    <Compile Include="IRepository\IAppointmentRepository.cs" />
+    <Compile Include="IRepository\IBlogRepository.cs" />
+    <Compile Include="IRepository\ICompanyRepository.cs" />
+    <Compile Include="IRepository\IFeaturedListingRepository.cs" />
+    <Compile Include="IRepository\ILocationRepository.cs" />
+    <Compile Include="IRepository\INewsLetterRepository.cs" />
+    <Compile Include="IRepository\IRapidApiRepository.cs" />
+    <Compile Include="IRepository\ISavedListingRepository.cs" />
+    <Compile Include="IRepository\IUserRepository.cs" />
+    <Compile Include="IRepository\IVisitorRepository.cs" />
+    <Compile Include="Models\Agent.cs" />
+    <Compile Include="Models\Appointment.cs" />
+    <Compile Include="Models\AutoComplete.cs" />
+    <Compile Include="Models\Blog.cs" />
+    <Compile Include="Models\BusinessConstants.cs" />
+    <Compile Include="Models\CollectionList.cs" />
+    <Compile Include="Models\Company.cs" />
+    <Compile Include="Models\ConnectionInfo.cs" />
+    <Compile Include="Models\FeaturedListing.cs" />
+    <Compile Include="Models\Listing.cs" />
+    <Compile Include="Models\Location.cs" />
+    <Compile Include="Models\NewsLetterSubscription.cs" />
+    <Compile Include="Models\PropertyDetail.cs" />
+    <Compile Include="Models\QueryStringObject.cs" />
+    <Compile Include="Models\RapidApiDetail.cs" />
+    <Compile Include="Models\SavedListing.cs" />
+    <Compile Include="Models\Statistics.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\Visitor.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\AgentRepository.cs" />
+    <Compile Include="Repository\AppointmentRepository.cs" />
+    <Compile Include="Repository\BlogRepository.cs" />
+    <Compile Include="Repository\CompanyRepository.cs" />
+    <Compile Include="Repository\FeaturedListingRepository.cs" />
+    <Compile Include="Repository\LocationRepository.cs" />
+    <Compile Include="Repository\NewsLetterRepository.cs" />
+    <Compile Include="Repository\RapidApiRepository.cs" />
+    <Compile Include="Repository\SavedListingRepository.cs" />
+    <Compile Include="Repository\UserRepository.cs" />
+    <Compile Include="Repository\VisitorRepository.cs" />
+    <Compile Include="Settings\ConnectionSettings.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
